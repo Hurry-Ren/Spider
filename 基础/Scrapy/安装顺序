@@ -1,0 +1,12 @@
+1. 先升级pip   python -m pip install upgrade pip
+2. 安装wheel   直接cmd下： pip install wheel
+3. 安装lxml和Twisted 需要在lfd python官网下载这两个，然后再cmd下进入目录用命令：pip install 文件名
+4. 安装scrapy 直接cmd下：pip install scrapy
+
+cmd状态下输入scrapy，弹出相关信息即安装成功
+
+
+创建scrapy爬虫模板：
+ scrapy genspider [-t template] <name> <domain> 即：scrapy genspider -t 模板名 文件名 域名
+ 例：scrapy genspider -t basic dangdang dangdang.com
+    模板可用:scrapy genspider -l 查看

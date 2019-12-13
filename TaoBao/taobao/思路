@@ -1,0 +1,8 @@
+模拟登陆淘宝，使用的是pyppeteer进行模拟，可以登进去，但没爬取东西。
+
+发现的问题：
+    1.网址一定要完整
+    2.使用pyppeteer就不要使用time.sleep函数，会报错！！！
+        用await asyncio.sleep函数
+
+最后：模拟登陆的保存cookie访问其他页面在研究

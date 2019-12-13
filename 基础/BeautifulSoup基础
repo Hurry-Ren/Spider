@@ -1,0 +1,37 @@
+BeautifulSoup基本用法：
+
+from bs4 import BeautifulSoup as bs
+import urllib.request
+targetData = urllib.request.urlopen('www.baidu.com').read().decode('utf-8','ignore')
+data = bs(targetData)
+
+#格式化输出
+print(data.prettify())
+
+#获取标签 ： bs对象.标签名
+data.title
+
+#获取标签里面的文字 ： bs对象.标签名.string
+data.title.string
+
+#获取标签名 ： bs对象.标签名.name
+data.title.name
+
+#获取属性列表 ： bs对象.标签名.attrs
+data.a.attrs
+
+#获取某个属性对应的值 ： bs对象.标签名['属性名'] 或 bs对象.标签名.get('属性名')
+data.a['class']
+data.a.get('class')
+
+#提取所有某个节点的内容 :  bs对象.find_all('标签名') bs对象.find_all(['标签名1','标签名2'])
+data.find_all('a')
+data.find_all(['a','ul'])
+
+#提取所有子节点 ：bs对象.标签.contents  bs对象.标签.children
+x = data.ul.contents    //列表数据
+y = data.ul.children    //生成器数据，可直接for循环，也可以用下面的方法变成列表
+all = [i for i in k2]
+
+
+更多可参考官方文档 http://beautifulsoup.readthedocs.io/zh_CN/latest/

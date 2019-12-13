@@ -1,0 +1,15 @@
+import time
+def phone(driver):
+    driver.find_element_by_xpath('//*[@id="tabTwo"]').click()
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="phone"]').clear()
+    driver.find_element_by_xpath('//*[@id="phone"]').send_keys('15970152175')
+    time.sleep(5)
+    driver.find_element_by_xpath('//*[@id="app"]/div/div/div[1]/div[2]/div[5]/div/div[4]/div/button').click()
+    time.sleep(20)
+    print("输入验证码：")
+    code = input()
+    driver.find_element_by_xpath('//*[@id="code"]').clear()
+    driver.find_element_by_xpath('//*[@id="code"]').send_keys(code)
+    driver.find_element_by_xpath('//*[@id="app"]/div/div/div[1]/div[2]/div[5]/div/div[6]/div/button').click()
+    time.sleep(5)

@@ -1,0 +1,10 @@
+PhantomJS
+ 是一款无界面浏览器，需要去网上下载安装，它模拟浏览器行为，解决一些反爬措施
+ 需要同时安装selenium库
+
+
+
+但是PhantomJS已死，改用selenium+Firefox了，跑路~
+
+
+哈哈哈哈哈哈哈
